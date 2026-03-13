@@ -5,39 +5,39 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Instagram Reel for Brand Growth",
+    title: "Best Edit",
     category: "Short-form Content",
     tools: "Premiere Pro, CapCut, Motion Graphics",
     image: "/images/placeholder.webp",
-    video: "1000119441.mp4",
+    video: "video/best edit.mp4",
   },
   {
-    title: "Travel Vlog Edit",
+    title: "Content Creation",
     category: "YouTube Video",
     tools: "DaVinci Resolve, Color Grading, Storytelling",
     image: "/images/placeholder.webp",
-    video: "1000119442.mp4",
+    video: "video/content.mp4",
   },
   {
-    title: "Promotional Ad Campaign",
+    title: "Gym Promo",
     category: "Commercial Video",
     tools: "After Effects, Sound Design, B-Roll",
     image: "/images/placeholder.webp",
-    video: "1000119443.mp4",
+    video: "video/gym.mp4",
   },
   {
-    title: "Podcast Highlights",
+    title: "Market Highlights",
     category: "Engagement Clips",
     tools: "Premiere Pro, AI Captions, Hooks",
     image: "/images/placeholder.webp",
-    video: "1000119444.mp4",
+    video: "video/market.mp4",
   },
   {
-    title: "Music Video Editing",
+    title: "Pizza Edit",
     category: "Creative Video",
     tools: "DaVinci Resolve, VFX, Syncing",
     image: "/images/placeholder.webp",
-    video: "1000119447.mp4",
+    video: "video/pizza.mp4",
   },
 ];
 
@@ -120,7 +120,11 @@ const Work = () => {
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage 
+                        image={project.image} 
+                        alt={project.title} 
+                        video={project.video} 
+                      />
                     </div>
                   </div>
                 </div>
