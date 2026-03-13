@@ -124,6 +124,7 @@ const Work = () => {
                         image={project.image} 
                         alt={project.title} 
                         video={project.video} 
+                        isActive={index === currentIndex}
                       />
                     </div>
                   </div>
