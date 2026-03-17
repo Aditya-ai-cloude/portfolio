@@ -66,8 +66,9 @@ const WorkImage = (props: Props) => {
                 className="portfolio-video"
                 muted={isMuted}
                 playsInline
+                autoPlay={props.isActive}
                 loop 
-                preload={props.isActive ? "auto" : "none"}
+                preload={props.isActive ? "auto" : "metadata"}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <button 
