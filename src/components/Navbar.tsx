@@ -10,12 +10,13 @@ export let smoother: ScrollSmoother;
 
 const Navbar = () => {
   useEffect(() => {
+    const isDesktop = window.innerWidth > 1024;
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 1.7,
-      speed: 1.7,
-      effects: true,
+      smooth: isDesktop ? 1.7 : 0, // Disable smooth on mobile
+      speed: isDesktop ? 1.7 : 1, // Reset speed to 1 on mobile
+      effects: isDesktop, // Disable data-speed / data-lag effects on mobile
       autoResize: true,
       ignoreMobileResize: true,
     });

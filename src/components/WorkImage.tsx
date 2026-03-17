@@ -15,7 +15,17 @@ const WorkImage = (props: Props) => {
 
   useEffect(() => {
     if (videoRef.current) {
+      // Vital for iOS autoplay behavior
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
+
+  useEffect(() => {
+    if (videoRef.current) {
       if (props.isActive) {
+        // Only load the video fully if it's active
+        videoRef.current.setAttribute("preload", "auto");
         // Play the video when active
         const playPromise = videoRef.current.play();
         if (playPromise !== undefined) {
@@ -24,9 +34,10 @@ const WorkImage = (props: Props) => {
           });
         }
       } else {
-        // Pause and reset when inactive
+        // Pause, reset, and don't keep loading when inactive
         videoRef.current.pause();
         videoRef.current.currentTime = 0;
+        videoRef.current.setAttribute("preload", "none");
       }
     }
   }, [props.isActive]);
@@ -54,9 +65,9 @@ const WorkImage = (props: Props) => {
                 src={`/videos/${props.video}`} 
                 className="portfolio-video"
                 muted={isMuted}
-                playsInline={true}
+                playsInline
                 loop 
-                preload="auto"
+                preload={props.isActive ? "auto" : "none"}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <button 
