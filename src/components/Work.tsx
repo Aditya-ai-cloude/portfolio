@@ -5,39 +5,39 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Best Edit",
+    title: "Cinematic Edit 1",
     category: "Short-form Content",
     tools: "Premiere Pro, CapCut, Motion Graphics",
     image: "/images/placeholder.webp",
-    video: "video/best edit.mp4",
+    video: "video/01_Best_Cinematic_Edit.MP4",
   },
   {
-    title: "Content Creation",
-    category: "YouTube Video",
-    tools: "DaVinci Resolve, Color Grading, Storytelling",
+    title: "Cinematic Edit 2",
+    category: "Short-form Content",
+    tools: "DaVinci Resolve, Color Grading",
     image: "/images/placeholder.webp",
-    video: "video/content.mp4",
+    video: "video/02_Best_Cinematic_Edit.MP4",
   },
   {
-    title: "Gym Promo",
+    title: "Brand Commercial",
     category: "Commercial Video",
     tools: "After Effects, Sound Design, B-Roll",
     image: "/images/placeholder.webp",
-    video: "video/gym.mp4",
+    video: "video/_Brand_Commercial_Edit.MP4",
   },
   {
-    title: "Market Highlights",
-    category: "Engagement Clips",
+    title: "KALP Commercial",
+    category: "Commercial Video",
     tools: "Premiere Pro, AI Captions, Hooks",
     image: "/images/placeholder.webp",
-    video: "video/market.mp4",
+    video: "video/_KALP_Commercial_Edit.mp4",
   },
   {
-    title: "Pizza Edit",
+    title: "Short Simple Edit",
     category: "Creative Video",
     tools: "DaVinci Resolve, VFX, Syncing",
     image: "/images/placeholder.webp",
-    video: "video/pizza.mp4",
+    video: "video/_Short_Simple_Edit.mp4",
   },
 ];
 
